@@ -31,9 +31,16 @@ public class LiveVideoStreamingServer
 
         //Met die 1sec sleep is hij connected
         Thread.Sleep(1000);
-        Console.WriteLine(obs.IsConnected);
-        // Server IP (Best Guess): 10.0.0.9
-        // Server Port: 4455
-        // Server Password: NECRZ46vwRR5i5ui
+        Console.WriteLine($"OBS WebSocket connected: {0}", obs.IsConnected);
+
+        //await obs.SendRequestAsync("SetCurrentScene", new { sceneName = "YourSceneName" });
+
+    }
+
+
+    private void SendRequestAsync(OBSWebsocket obs)
+    {
+        //return obs.SendRequest("SetCurrentScene", { sceneName = "YourSceneName" });
+
     }
 }
